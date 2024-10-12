@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.container {
+    width: 100%;
+    margin: 3rem auto;
+    padding: 0 90px;
+}
+
+.bg{
+    background-color: #45A29E;
+    padding: 2rem;
+    z-index: -100 !important;
+    border-radius: 4rem;
+}
+
+.title{
+    margin: 1rem auto;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services{
+    /* width: fit-content; */
+    margin: 5rem 0 3rem 0;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* Space between the cards */
+    width: 100%;
+}
+
+@media screen  and (max-width: 900px) {
+    .container{
+        padding: 0 40px;
+    }
+}
+
+@media screen  and (max-width: 600px) {
+    .services{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

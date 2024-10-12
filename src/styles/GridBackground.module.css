@@ -1,0 +1,54 @@
+.grid {
+    position: fixed;
+    top: -2px;
+    left: -2px;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    background-color: #000;
+    /* Black background */
+    background-image:
+        linear-gradient(90deg, rgba(0, 0, 193, 0.587) 1.5px, transparent 1.5px),
+        /* Vertical lines */
+        linear-gradient(180deg, rgba(0, 0, 193, 0.587) 1.5px, transparent 1.5px);
+    /* Horizontal lines */
+    background-size: 50px 50px;
+    /* Small square grid */
+    z-index: -2;
+    pointer-events: none;
+}
+
+.highlighter {
+    position: absolute;
+    opacity: 5 !important;
+    width: 3px;
+    /* Match the grid line width */
+    height: 80px;
+    /* Shorter length */
+    background: linear-gradient(to bottom, rgba(102, 252, 241, 0), rgba(5, 252, 252, 0.8));
+    ;
+    /* Light cyan */
+    animation: highlighterMove 4s linear infinite;
+    z-index: -1;
+}
+
+/* Highlighter falling animation */
+@keyframes highlighterMove {
+    0% {
+        transform: translateY(0px);
+        /* Start above the grid */
+        opacity: 5;
+    }
+
+    70% {
+        transform: translateY(150px);
+        /* Fall within viewport */
+        opacity: 3 !important;
+    }
+
+    100% {
+        transform: translateY(250px);
+        /* Fall off the viewport */
+        opacity: 0 !important;
+    }
+}
