@@ -116,4 +116,24 @@
         width: 50%;
       }
   }
+
+  @media screen and (max-width: 600px) {
+      .card{
+        width: 120px;
+        height: 170px;
+      }
+      .card::before{
+        width: 130px;
+        height: 180px;
+      }
+      .card:hover::before {
+        transform: rotate(-90deg) scaleX(1.37) scaleY(0.72);
+      }
+      .heading{
+        font-size: 10px;
+      }
+      .img{
+        width: 50%;
+      }
+  }
   
