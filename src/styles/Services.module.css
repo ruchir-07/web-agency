@@ -45,3 +45,20 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+@media screen  and (max-width: 300px) {
+    .bg{
+        padding: 0.5rem;
+        border-radius: 2rem;
+    }
+    .container{
+        padding: 0 20px; 
+    }
+    .services{
+        padding: 0 1rem;
+        margin-top: 3rem;
+    }
+    .title{
+        font-size: 30px;
+    }
+}
