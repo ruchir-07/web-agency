@@ -1,0 +1,97 @@
+/* body {
+    background: #010101;
+    height: 100vh;
+    text-align: center;
+  } */
+  
+  .container {
+    height: 100%;
+    margin-top: 20px;  
+  }
+  
+  .dice {
+    position: relative;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: spin 9s infinite alternate;
+  }
+  
+  @keyframes spin {
+      0% {
+          transform: rotateX(90deg) rotateY(360deg) translateZ(0px);
+      }
+      20% {
+          transform: rotateY(-90deg) rotateX(360deg) translateZ(0px);
+      }
+      40% {
+          transform: rotateX(-90deg) rotateX(360deg) translateZ(0px);
+      }
+      60% {
+          transform: rotateY(90deg) rotateY(360deg) translateZ(0px);
+      }
+      80% {
+          transform: rotateX(-90deg) rotateX(360deg) translateZ(0px);
+      }
+      100% {
+      transform: rotateY(90deg) rotateY(180deg);
+          transform: translateZ(0px);
+      }
+  }
+  
+  /* .container:hover .dice {
+    animation: none;
+    width: auto;
+  } */
+  
+  .dice > div {
+    position:absolute;
+    height: 200px;
+    width: 200px;
+    transition: all 1s;
+  }
+  
+  /* .container:hover .dice > .side{
+    position: relative;
+    transform: none;
+    display: inline-block;
+  } */
+  
+  /* .container .dice > .side:hover{
+    transform: scale(1.1);
+  } */
+  
+  .side {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    transition: .5s;
+    background-image: url("http://images.freeimages.com/images/premium/large-thumbs/1972/19721409-dark-grey-scratched-wall-background.jpg");
+    
+  }
+  
+  .one {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
+  .two {
+    transform: translateZ(100px);
+  }
+  
+  .three {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  .four {
+    transform: rotateY(180deg) translateZ(100px); 
+  }
+  
+  .five {
+    transform: rotateY(-90deg) translateZ(100px);  
+  }
+  
+  .six {
+    transform: rotateX(-90deg) translateZ(100px);  
+  }
+  

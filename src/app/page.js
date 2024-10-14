@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import "./globals.css";
 import Provider from '@/components/Provider';
 import Services from '@/components/services/Services';
+import Skill from '@/components/Skills/Skill';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection />
       <Provider />
       <Services />
+      <Skill />
     </main>
   );
 }
